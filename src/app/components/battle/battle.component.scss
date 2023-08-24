@@ -1,0 +1,54 @@
+:host {
+  width: 70%;
+  max-width: 400px;
+  height: 50vh;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: center;
+  color: white;
+}
+app-header{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.div-items{
+  width: 90px;
+  height: 90px;
+  padding: 16px;
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+}
+.btn-paper{
+  border: hsl(230, 89%, 62%) 10px solid;
+}
+.btn-scissors{
+  border:  hsl(39, 89%, 49%) 10px solid;
+}
+.btn-rock{
+  border:  hsl(349, 71%, 52%) 10px solid;
+
+}
+.message{
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  font-size: 40px;
+}
+.btn-home{
+  padding: 12px 24px;
+  border-radius: 8px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  cursor: pointer;
+}
+

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { GameItem } from './game-item.model';
 
 @Component({
   selector: 'app-game-item',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./game-item.component.scss']
 })
 export class GameItemComponent {
+  @Input() gameItem!: GameItem
 
 }

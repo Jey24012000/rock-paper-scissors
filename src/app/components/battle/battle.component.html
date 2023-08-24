@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="div-items" [ngClass]="{
+  'btn-paper':gameItem.clase === 'btn-paper',
+  'btn-scissors':gameItem.clase === 'btn-scissors',
+' btn-rock': gameItem.clase === 'btn-rock'
+}">
+  <img src="../../../assets/{{gameItem.imageUrl}}" alt="">
+</div>
+
+<div class="div-items" [ngClass]="{
+  'btn-paper': compuItem.clase === 'btn-paper',
+  'btn-scissors':compuItem.clase === 'btn-scissors',
+' btn-rock': compuItem.clase === 'btn-rock'
+}">
+  <img src="../../../assets/{{compuItem.imageUrl}}" alt="">
+</div>
+
+<p>YOU PICKED</p>
+<p>THE HOUSE PICKED</p>
+
+<p class="message">{{mensaje}}</p>
+
+
+<button class="btn-home" routerLink="/home">PLAY AGAIN </button>

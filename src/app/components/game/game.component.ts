@@ -1,5 +1,7 @@
 import { style } from '@angular/animations';
 import { Component } from '@angular/core';
+import { GameItem } from '../game-item/game-item.model';
+import { GameService } from './game.service';
 
 @Component({
   selector: 'app-game',
@@ -8,23 +10,18 @@ import { Component } from '@angular/core';
 })
 export class GameComponent {
 
-  btn = false;
-  btn2 = false;
-  btn3 = false;
-  end = 0;
+  constructor(
+    private gameService: GameService
+  ){}
 
-  clickPaper(){
-    this.btn2 = !false;
-    this.btn3 = !false;
+  get gameItems(): GameItem[]{
+    return this.gameService.game_items;
   }
-  clickScissors(){
-    this.btn = !false;
-    this.btn3 = !false;
-  }
-  clickRock(){
-    this.btn2 = !false;
-    this.btn = !false;
 
-    this.end = 2;
+ 
+
+  recuperarNum(i: number){
+
+    this.gameService.itemsVersus(i);
   }
 }

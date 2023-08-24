@@ -3,10 +3,7 @@
   background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  width: 70%;
-  max-width: 400px;
-  height: 30vh;
-  max-height: 400px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -14,23 +11,7 @@
   justify-items: center;
   gap: 20px ;
 }
-button
-{
-  width: 100px;
-  height: 100px;
-  padding: 16px;
-  border-radius: 100%;
 
-  cursor: pointer;
-  justify-items: center;
-  align-items: center;
-
-
-  img{
-    width: 36px;
-
-  }
-}
 .btn-paper{
   border: hsl(230, 89%, 62%) 10px solid;
 }
@@ -45,9 +26,4 @@ button
 
 }
 
-.choice{
-  color: white;
-  letter-spacing: 2px;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
+

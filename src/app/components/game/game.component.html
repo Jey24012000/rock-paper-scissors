@@ -1,25 +1,15 @@
 
-<button *ngIf="btn == false" (click)="clickPaper()" class="btn-paper"><img src="../../../assets/icon-paper.svg" alt=""></button>
-<button *ngIf="btn2 == false" (click)="clickScissors()" class="btn-scissors"><img src="../../../assets/icon-scissors.svg" alt=""></button>
-<button  [ngStyle]="{'grid-column-end': end}" *ngIf="btn3 == false" (click)="clickRock()" class="btn-rock"><img src="../../../assets/icon-rock.svg" alt=""></button>
+<app-game-item
+  routerLink="/versus"
+
+  *ngFor="let item of gameItems; index as i"
+  (click)="recuperarNum(i)"
+  [gameItem]="item"
+  [ngClass]="{
+    'btn-paper':item.clase === 'btn-paper',
+    'btn-scissors':item.clase === 'btn-scissors',
+  ' btn-rock':item.clase === 'btn-rock'
+  }"
+></app-game-item>
 
 
-
-<p class="choice" *ngIf="btn == true || btn2 == true || btn3 == true"> YOU PICKED</p>
-<p class="choice" *ngIf="btn == true || btn2 == true || btn3 == true"> THE HOUSE PICKED</p>
-<!--
-Algoritmo
-
-- Al dar clic los otros botones desaparecen
-- se muestra solo el botón seleccionado
-- mostrar que item escogio la compu
--comparar quien gano
-mostrar componente
-mostrar home
-
-
-
-
-
-
--->

@@ -3,20 +3,50 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
 import { GameComponent } from './components/game/game.component';
-import { GameItemComponent } from './game-item/game-item.component';
+import { GameItemComponent } from './components/game-item/game-item.component';
+import { HomeComponent } from './components/home/home.component';
+
+import { RouterModule, Routes } from '@angular/router';
+import { BattleComponent } from './components/battle/battle.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+
+const routes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'versus',
+    component: BattleComponent
+  },
+  {
+    path:'',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path:"**",
+    component: PageNotFoundComponent
+  }
+
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ButtonsComponent,
     GameComponent,
-    GameItemComponent
+    GameItemComponent,
+    HomeComponent,
+    BattleComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

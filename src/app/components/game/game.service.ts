@@ -37,6 +37,8 @@ export class GameService {
   mensaje: string = '';
   puntos: number= 0;
 
+  record: number = 0;
+
   itemsVersus(numeroItem: number) {
 
 
@@ -68,7 +70,10 @@ export class GameService {
       this.mensaje= "YOU LOSE";
       this.puntos = 0;
     }
-    console.log(this.puntos);
+
+    if(this.puntos > this.record){
+      this.record = this.puntos;
+    } 
 
   }
 
